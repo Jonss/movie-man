@@ -6,7 +6,7 @@ package com.github.jonss.movieman.model;
 public class Movie {
 
     private String title;
-    private String imgTumbnail;
+    private String imgThumbnail;
     private String overView;
     private Double voteAverage;
     private String ReleaseDate;
@@ -19,12 +19,12 @@ public class Movie {
         this.title = title;
     }
 
-    public String getImgTumbnail() {
-        return imgTumbnail;
+    public String getImgThumbnail() {
+        return imgThumbnail;
     }
 
-    public void setImgTumbnail(String imgTumbnail) {
-        this.imgTumbnail = imgTumbnail;
+    public void setImgThumbnail(String imgThumbnail) {
+        this.imgThumbnail = imgThumbnail;
     }
 
     public String getOverView() {
@@ -50,4 +50,5 @@ public class Movie {
     public void setReleaseDate(String releaseDate) {
         ReleaseDate = releaseDate;
     }
+
 }
