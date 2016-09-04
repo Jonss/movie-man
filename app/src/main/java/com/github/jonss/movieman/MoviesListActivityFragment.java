@@ -10,11 +10,9 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.github.jonss.movieman.Adapter.MovieAdapter;
-import com.github.jonss.movieman.connection.MoviesAsyncTask;
 import com.github.jonss.movieman.model.Movie;
 
 import java.util.ArrayList;
-import java.util.List;
 
 /**
  * A placeholder fragment containing a simple view.
@@ -44,7 +42,6 @@ public class MoviesListActivityFragment extends Fragment {
     }
 
     private void getMovies(){
-        new MoviesAsyncTask();
     }
 
 }
