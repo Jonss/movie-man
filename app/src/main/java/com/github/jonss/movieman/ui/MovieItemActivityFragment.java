@@ -13,8 +13,6 @@ import com.bumptech.glide.Glide;
 import com.github.jonss.movieman.R;
 import com.github.jonss.movieman.model.Movie;
 
-import java.io.Serializable;
-
 /**
  * A placeholder fragment containing a simple view.
  */
@@ -37,11 +35,11 @@ public class MovieItemActivityFragment extends Fragment {
         Intent intent = getActivity().getIntent();
         Movie movie = (Movie) intent.getSerializableExtra(Intent.EXTRA_TEXT);
 
-        Glide.with(getActivity()).load(movie.getPoster_path()).into(imageView);
+        Glide.with(getActivity()).load(movie.getPosterPath()).into(imageView);
         overview.setText(movie.getOverview());
-        title.setText(movie.getOriginal_title());
-        voteAverage.setText(movie.getVote_average().toString());
-        releaseDate.setText(movie.getRelease_date());
+        title.setText(movie.getOriginalTitle());
+        voteAverage.setText(movie.getVoteAverage().toString());
+        releaseDate.setText(movie.getReleaseDate());
 
         return view;
     }

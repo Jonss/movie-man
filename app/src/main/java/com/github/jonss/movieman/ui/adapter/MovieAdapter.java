@@ -48,8 +48,8 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieViewHolder> {
     @Override
     public void onBindViewHolder(MovieViewHolder holder, int position) {
         movie = movies.get(position);
-        holder.setThumbnailImage(mContext, movie.getPoster_path());
-        holder.setTitleTextView(movie.getOriginal_title());
+        holder.setThumbnailImage(mContext, movie.getPosterPath());
+        holder.setTitleTextView(movie.getOriginalTitle());
     }
 
     @Override

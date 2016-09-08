@@ -4,21 +4,17 @@ import android.os.AsyncTask;
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
 import android.support.v7.widget.GridLayoutManager;
-import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.github.jonss.movieman.Adapter.MovieAdapter;
+import com.github.jonss.movieman.ui.adapter.MovieAdapter;
 import com.github.jonss.movieman.R;
 import com.github.jonss.movieman.connection.MovieDbAPI;
 import com.github.jonss.movieman.model.Movie;
-import com.github.jonss.movieman.model.Movies;
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.List;
 import java.util.concurrent.ExecutionException;
 

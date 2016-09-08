@@ -1,54 +1,44 @@
 package com.github.jonss.movieman.model;
 
+import com.github.jonss.movieman.util.Constants;
+import com.google.gson.annotations.SerializedName;
+
+import java.io.Serializable;
+
 /**
  * Created by neuromancer on 04/09/16.
  */
-public class Movie {
+public class Movie implements Serializable {
 
-    private String title;
-    private String imgThumbnail;
-    private String overView;
+    @SerializedName("original_title")
+    private String originalTitle;
+    @SerializedName("poster_path")
+    private String posterPath;
+    @SerializedName("overview")
+    private String overview;
+    @SerializedName("vote_average")
     private Double voteAverage;
-    private String ReleaseDate;
+    @SerializedName("release_date")
+    private String releaseDate;
 
-    public String getTitle() {
-        return title;
+    public String getOriginalTitle() {
+        return originalTitle;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
+    public String getPosterPath() {
+        return Constants.IMAGE_URL + posterPath;
     }
 
-    public String getImgThumbnail() {
-        return imgThumbnail;
-    }
-
-    public void setImgThumbnail(String imgThumbnail) {
-        this.imgThumbnail = imgThumbnail;
-    }
-
-    public String getOverView() {
-        return overView;
-    }
-
-    public void setOverView(String overView) {
-        this.overView = overView;
+    public String getOverview() {
+        return overview;
     }
 
     public Double getVoteAverage() {
         return voteAverage;
     }
 
-    public void setVoteAverage(Double voteAverage) {
-        this.voteAverage = voteAverage;
-    }
-
     public String getReleaseDate() {
-        return ReleaseDate;
-    }
-
-    public void setReleaseDate(String releaseDate) {
-        ReleaseDate = releaseDate;
+        return releaseDate;
     }
 
 }
