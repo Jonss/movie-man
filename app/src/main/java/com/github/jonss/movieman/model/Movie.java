@@ -41,4 +41,10 @@ public class Movie implements Serializable {
         return releaseDate;
     }
 
+    @Override
+    public String toString() {
+        return "Movie{" +
+                "originalTitle='" + originalTitle + '\'' +
+                '}';
+    }
 }

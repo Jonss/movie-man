@@ -1,7 +1,9 @@
 package com.github.jonss.movieman.ui.adapter;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.support.v4.app.FragmentActivity;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,6 +13,7 @@ import com.github.jonss.movieman.ui.MovieItemActivity;
 import com.github.jonss.movieman.R;
 import com.github.jonss.movieman.model.Movie;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -23,8 +26,8 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieViewHolder> {
     private Movie movie;
     private Context mContext;
 
-    public MovieAdapter(List<Movie> movies, Context context) {
-        this.movies = movies;
+    public MovieAdapter(Context context) {
+        movies = new ArrayList<>();
         mInflater = LayoutInflater.from(context);
         mContext = mInflater.getContext();
     }
@@ -58,4 +61,9 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieViewHolder> {
     }
 
 
+    public MovieAdapter addAll(final List<Movie> movies, final Activity activity) {
+        this.movies.addAll(movies);
+        mContext = activity;
+        return this;
+    }
 }

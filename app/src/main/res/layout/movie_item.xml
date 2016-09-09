@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:orientation="vertical"
+              android:layout_margin="4sp"
               android:layout_width="match_parent"
               android:layout_height="wrap_content">
 
@@ -8,7 +9,7 @@
         android:id="@+id/movie_thumbnail_image"
         android:scaleType="fitXY"
         android:layout_width="match_parent"
-        android:layout_height="160sp"/>
+        android:layout_height="200sp"/>
 
     <TextView
         android:id="@+id/movie_title_text"
