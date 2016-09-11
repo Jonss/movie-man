@@ -4,4 +4,7 @@
     <string name="title_activity_movie_item">MovieItemActivity</string>
     <string name="rate">Rate:</string>
     <string name="format">dd-MM-yyyy</string>
+    <string name="exit">Exit</string>
+    <string name="connection_error">Connection error</string>
+    <string name="connection_message">It was not possible connect! Please, check your internet connection.</string>
 </resources>

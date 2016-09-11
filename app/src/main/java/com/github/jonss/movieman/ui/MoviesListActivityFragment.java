@@ -63,7 +63,7 @@ public class MoviesListActivityFragment extends Fragment {
 
             @Override
             public void onFailure(Call<Movies> call, Throwable t) {
-                Log.e("Acesso ao MovieDBAPI", "falhou");
+                Log.e("Acesso ao MovieDBAPI", "falhou" + call.request().body());
             }
         });
 

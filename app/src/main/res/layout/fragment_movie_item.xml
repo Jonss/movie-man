@@ -6,12 +6,6 @@
               tools:context=".ui.MovieItemActivityFragment"
               tools:showIn="@layout/activity_movie_item">
 
-    <ImageView
-        android:id="@+id/movie_image"
-        android:layout_width="match_parent"
-        android:layout_height="400sp"
-        android:scaleType="fitXY"/>
-
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -24,6 +18,12 @@
             android:paddingLeft="@dimen/activity_horizontal_margin"
             android:paddingRight="@dimen/activity_horizontal_margin"
             android:paddingTop="@dimen/activity_vertical_margin">
+
+            <ImageView
+                android:id="@+id/movie_image"
+                android:layout_width="match_parent"
+                android:layout_height="400sp"
+                android:scaleType="fitXY"/>
 
             <TextView
                 android:id="@+id/movie_title"
@@ -39,7 +39,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/text_distance"
                 android:textDirection="firstStrong"
-                android:textSize="1@dimen/text_distance"/>
+                android:textSize="16dp"/>
 
             <LinearLayout
                 android:layout_width="match_parent"

@@ -1,12 +1,15 @@
 package com.github.jonss.movieman.ui;
 
+import android.content.DialogInterface;
 import android.os.Bundle;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
 import com.github.jonss.movieman.R;
+import com.github.jonss.movieman.connection.Connectivity;
 
 public class MoviesListActivity extends AppCompatActivity {
 
@@ -17,6 +20,24 @@ public class MoviesListActivity extends AppCompatActivity {
         setContentView(R.layout.activity_movies_list);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        verifyConnection();
+    }
+
+    private void verifyConnection() {
+        if (!Connectivity.isOnline(this)) {
+            AlertDialog.Builder builder = new AlertDialog.Builder(this);
+            builder.setTitle(getString(R.string.connection_error))
+                    .setMessage(getString(R.string.connection_message))
+                    .setNegativeButton(getString(R.string.exit),
+                            new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialog, int which) {
+                                    finish();
+                                }
+                            });
+            builder.create().show();
+        }
     }
 
     @Override

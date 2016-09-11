@@ -8,6 +8,6 @@ import com.github.jonss.movieman.BuildConfig;
 public class Constants {
 
     public static final String MOVIE_DB_URL = "https://api.themoviedb.org/3/";
-    public static final String IMAGE_URL = "http://image.tmdb.org/t/p/w500";
+    public static final String IMAGE_URL = "http://image.tmdb.org/t/p/w342";
     public static final String API_KEY = BuildConfig.API_KEY;
 }
