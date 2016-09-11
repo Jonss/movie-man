@@ -41,6 +41,8 @@ public class MovieItemActivityFragment extends Fragment {
         voteAverage.setText(movie.getVoteAverage().toString());
         releaseDate.setText(movie.getReleaseDate());
 
+        getActivity().setTitle(movie.getOriginalTitle());
+
         return view;
     }
 }

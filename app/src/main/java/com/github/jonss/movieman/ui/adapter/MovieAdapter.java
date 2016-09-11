@@ -51,7 +51,6 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieViewHolder> {
     public void onBindViewHolder(MovieViewHolder holder, int position) {
         movie = movies.get(position);
         holder.setThumbnailImage(mContext, movie.getPosterPath());
-        holder.setTitleTextView(movie.getOriginalTitle());
     }
 
     @Override

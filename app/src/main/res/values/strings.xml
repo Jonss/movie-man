@@ -2,4 +2,6 @@
     <string name="app_name">MovieMan</string>
     <string name="action_settings">Settings</string>
     <string name="title_activity_movie_item">MovieItemActivity</string>
+    <string name="rate">Rate:</string>
+    <string name="format">dd-MM-yyyy</string>
 </resources>

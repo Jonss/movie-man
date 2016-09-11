@@ -55,11 +55,9 @@ public class MoviesListActivityFragment extends Fragment {
         Retrofit mRetrofit = RetrofitFactory.retrofit();
         mMovieDb = mRetrofit.create(MovieDb.class);
         Call<Movies> call = mMovieDb.listPopularMovies(Constants.API_KEY);
-        Log.d("PQP",call.request().url().toString());
         call.enqueue(new Callback<Movies>() {
             @Override
             public void onResponse(Call<Movies> call, Response<Movies> response) {
-                Log.d("PQP", response.body().getMovies().toString());
                 updateList(response.body().getMovies());
             }
 

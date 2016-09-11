@@ -3,7 +3,6 @@
               android:layout_width="match_parent"
               android:layout_height="match_parent"
               android:orientation="vertical"
-
               tools:context=".ui.MovieItemActivityFragment"
               tools:showIn="@layout/activity_movie_item">
 
@@ -29,22 +28,49 @@
             <TextView
                 android:id="@+id/movie_title"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/text_distance"
+                android:textSize="20dp"
+                android:textStyle="bold"/>
 
             <TextView
                 android:id="@+id/movie_overview_text"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/text_distance"
+                android:textDirection="firstStrong"
+                android:textSize="1@dimen/text_distance"/>
 
-            <TextView
-                android:id="@+id/movie_vote_average"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/text_distance"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/rate"/>
+
+                <TextView
+                    android:id="@+id/movie_vote_average"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/text_distance"/>
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="6dp"
+                    android:src="@drawable/star"/>
+
+            </LinearLayout>
 
             <TextView
                 android:id="@+id/movie_release_date"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/text_distance"/>
         </LinearLayout>
     </ScrollView>
 
